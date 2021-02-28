@@ -155,6 +155,14 @@
 	<search-pattern>class: image</search-pattern>
 </host>
 
+<!-- Verified -->
+<host id="imagehaha">
+	<domain>imagehaha.com/</domain>
+	<path-pattern>image/[^&amp;&lt;&gt;"]+</path-pattern>
+	<search-pattern>class: image</search-pattern>
+</host>
+
+
 <!--  Verified -->
 <host id="imagefap">
 	<domain>imagefap.com</domain>
@@ -473,12 +481,4 @@
 	<interceptor>replace: '_\d+\.(jpg|png|gif)', '_1280.$1'</interceptor>
 </host>
 	
-<!-- Verified -->
-<host id="tumblr-restricted">
-	<domain>tumblr.com</domain>
-	<path-pattern>_$CURRENT$_</path-pattern>
-	<search-pattern><![CDATA[expreg: data-big-photo="([^"]+)"]]></search-pattern>
-	<interceptor>replace: '_\d+\.(jpg|png|gif)', '_1280.$1'</interceptor>
-</host>
-
 </root>
